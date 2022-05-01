@@ -15,4 +15,7 @@ class DarkThemeColor implements ColorThemeCustom {
 
   @override
   Color shadowColor = const Color.fromARGB(238, 247, 246, 239);
+
+  @override
+  var selectedItemColor = const Color.fromARGB(255, 201, 58, 14);
 }

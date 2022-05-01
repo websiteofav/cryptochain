@@ -1,4 +1,4 @@
-import 'package:cryptochain/homepage/homepage.dart';
+import 'package:cryptochain/homepage/screens/homepage.dart';
 import 'package:cryptochain/theme/theme_notifier.dart';
 import 'package:cryptochain/utils/device_dimensions.dart';
 import 'package:flutter/material.dart';

@@ -1,11 +1,13 @@
 import 'dart:async';
 
+import 'package:cryptochain/homepage/bloc/homepage_bloc.dart';
 import 'package:cryptochain/homepage/models/tutorial_model.dart';
 import 'package:cryptochain/theme/theme_notifier.dart';
 import 'package:cryptochain/utils/device_dimensions.dart';
 import 'package:cryptochain/utils/widgets/homepage_horizontal_tiles.dart';
 import 'package:cryptochain/utils/widgets/homepage_tutorial_titles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,7 +26,6 @@ class _HomePageState extends State<HomePage> {
 
   int _currentPage = 0;
   late Timer _timer;
-  final ValueNotifier<int> _pageNotifier = ValueNotifier<int>(0);
 
   void initState() {
     super.initState();
@@ -153,7 +154,15 @@ class _HomePageState extends State<HomePage> {
                           width: dimensions[1] * 0.9,
                           height: 50,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              BlocProvider.of<HomepageBloc>(context)
+                                  .add(TrendingEvent(
+                                convert: 'INR',
+                                limit: '5',
+                                start: '1',
+                                timePeriod: '24h',
+                              ));
+                            },
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     const Color.fromARGB(255, 216, 51, 51))),

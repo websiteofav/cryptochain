@@ -14,4 +14,6 @@ class LightThemeColor implements ColorThemeCustom {
   Color icon1 = const Color.fromARGB(240, 226, 206, 21);
   @override
   Color shadowColor = const Color.fromARGB(239, 10, 9, 1);
+  @override
+  var selectedItemColor = const Color.fromARGB(255, 255, 255, 255);
 }

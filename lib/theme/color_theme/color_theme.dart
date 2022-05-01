@@ -7,4 +7,5 @@ class ColorThemeCustom {
   late Color signupButton;
   late Color icon1;
   late Color shadowColor;
+  late Color selectedItemColor;
 }
